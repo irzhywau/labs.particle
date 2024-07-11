@@ -1,0 +1,392 @@
+- use node 18.18.2
+- install @particle-network/connectkit @particle-network/chains @particle-network/connectors OK
+	- many dependencies have been installed aside
+	- implemented provider component
+- build/start crash
+```
+Module not found: Error: Can't resolve 'http' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "http": require.resolve("stream-http") }'
+        - install 'stream-http'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "http": false }
+WARNING in ./node_modules/@metamask/safe-event-emitter/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@metamask/safe-event-emitter/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@metamask/safe-event-emitter/index.ts'
+
+WARNING in ./node_modules/@solana/buffer-layout/lib/Layout.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/buffer-layout/src/Layout.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/buffer-layout/src/Layout.ts'
+
+WARNING in ./node_modules/@walletconnect/environment/dist/cjs/crypto.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/crypto.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/crypto.ts'
+
+WARNING in ./node_modules/@walletconnect/environment/dist/cjs/env.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/env.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/env.ts'
+
+WARNING in ./node_modules/@walletconnect/environment/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/environment/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/events/dist/esm/events.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/events/src/events.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/events/src/events.ts'
+
+WARNING in ./node_modules/@walletconnect/events/dist/esm/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/events/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/events/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/constants/heartbeat.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/constants/heartbeat.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/constants/heartbeat.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/constants/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/constants/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/constants/index.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/heartbeat.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/heartbeat.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/heartbeat.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/types/heartbeat.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/types/heartbeat.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/types/heartbeat.ts'
+
+WARNING in ./node_modules/@walletconnect/heartbeat/dist/cjs/types/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/types/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/heartbeat/src/types/index.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-provider/dist/esm/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-provider/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-provider/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-provider/dist/esm/provider.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-provider/src/provider.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-provider/src/provider.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/constants.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/constants.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/constants.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/env.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/env.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/env.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/error.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/error.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/error.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/format.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/format.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/format.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/routing.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/routing.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/routing.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/types.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/types.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/types.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/url.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/url.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/url.ts'
+
+WARNING in ./node_modules/@walletconnect/jsonrpc-utils/dist/esm/validators.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/validators.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/jsonrpc-utils/src/validators.ts'
+
+WARNING in ./node_modules/@walletconnect/relay-auth/dist/esm/api.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/api.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/api.ts'
+
+WARNING in ./node_modules/@walletconnect/relay-auth/dist/esm/constants.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/constants.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/constants.ts'
+
+WARNING in ./node_modules/@walletconnect/relay-auth/dist/esm/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/relay-auth/dist/esm/types.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/types.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/types.ts'
+
+WARNING in ./node_modules/@walletconnect/relay-auth/dist/esm/utils.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/utils.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/relay-auth/src/utils.ts'
+
+WARNING in ./node_modules/@walletconnect/safe-json/dist/esm/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/safe-json/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/safe-json/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/constants/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/index.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/constants/misc.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/misc.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/misc.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/constants/time.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/time.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/constants/time.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/types/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/types/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/types/index.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/types/watch.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/types/watch.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/types/watch.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/utils/convert.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/convert.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/convert.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/utils/delay.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/delay.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/delay.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/utils/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/utils/index.ts'
+
+WARNING in ./node_modules/@walletconnect/time/dist/cjs/watch.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/watch.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/time/src/watch.ts'
+
+WARNING in ./node_modules/@walletconnect/window-getters/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/window-getters/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/window-getters/src/index.ts'
+
+WARNING in ./node_modules/@walletconnect/window-metadata/dist/cjs/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@walletconnect/window-metadata/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@walletconnect/window-metadata/src/index.ts'
+
+WARNING in ./node_modules/eth-rpc-errors/dist/classes.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/classes.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/classes.ts'
+
+WARNING in ./node_modules/eth-rpc-errors/dist/error-constants.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/error-constants.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/error-constants.ts'
+
+WARNING in ./node_modules/eth-rpc-errors/dist/errors.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/errors.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/errors.ts'
+
+WARNING in ./node_modules/eth-rpc-errors/dist/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/index.ts'
+
+WARNING in ./node_modules/eth-rpc-errors/dist/utils.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/utils.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/eth-rpc-errors/src/utils.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/JsonRpcEngine.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/JsonRpcEngine.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/JsonRpcEngine.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/createAsyncMiddleware.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/createAsyncMiddleware.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/createAsyncMiddleware.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/createScaffoldMiddleware.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/createScaffoldMiddleware.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/createScaffoldMiddleware.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/getUniqueId.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/getUniqueId.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/getUniqueId.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/idRemapMiddleware.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/idRemapMiddleware.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/idRemapMiddleware.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/index.ts'
+
+WARNING in ./node_modules/json-rpc-engine/dist/mergeMiddleware.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/mergeMiddleware.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/src/mergeMiddleware.ts'
+
+WARNING in ./node_modules/json-rpc-engine/node_modules/@metamask/safe-event-emitter/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/node_modules/@metamask/safe-event-emitter/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/json-rpc-engine/node_modules/@metamask/safe-event-emitter/index.ts'
+
+WARNING in ./node_modules/@particle-network/auth-core-modal/esm/antd-6TFEJYUW.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@particle-network/auth-core-modal/esm/antd.css.map' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@particle-network/auth-core-modal/esm/antd.css.map'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/error.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/error.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/struct.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/struct.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/coercions.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/coercions.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/refinements.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/refinements.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/types.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/types.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/utilities.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/structs/utilities.ts'
+
+WARNING in ./node_modules/@solana/web3.js/node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/utils.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@solana/web3.js/node_modules/superstruct/src/utils.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/error.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/error.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/struct.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/struct.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/coercions.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/coercions.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/refinements.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/refinements.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/types.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/types.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/utilities.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/structs/utilities.ts'
+
+WARNING in ./node_modules/superstruct/dist/index.mjs
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/superstruct/src/utils.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/superstruct/src/utils.ts'
+
+ERROR in ./node_modules/micro-ftch/index.js 57:15-30
+Module not found: Error: Can't resolve 'http' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "http": require.resolve("stream-http") }'
+        - install 'stream-http'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "http": false }
+
+ERROR in ./node_modules/micro-ftch/index.js 58:16-32
+Module not found: Error: Can't resolve 'https' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "https": require.resolve("https-browserify") }'
+        - install 'https-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "https": false }
+
+ERROR in ./node_modules/micro-ftch/index.js 59:15-30
+Module not found: Error: Can't resolve 'zlib' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "zlib": require.resolve("browserify-zlib") }'
+        - install 'browserify-zlib'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "zlib": false }
+
+ERROR in ./node_modules/micro-ftch/index.js 62:6-21
+Module not found: Error: Can't resolve 'util' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "util": require.resolve("util/") }'
+        - install 'util'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "util": false }
+
+ERROR in ./node_modules/micro-ftch/index.js 65:6-20
+Module not found: Error: Can't resolve 'url' in '/home/irzhy/www/labs.particle/node_modules/micro-ftch'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+        - add a fallback 'resolve.fallback: { "url": require.resolve("url/") }'
+        - install 'url'
+If you don't want to include a polyfill, you can use an empty module like this:
+        resolve.fallback: { "url": false }
+
+webpack compiled with 5 errors and 70 warnings
+No issues found.
+```
+
+- installed craco to enable wepkack tweaks OK, but still facing the error
+- polyfilled http (stream-http) and https (https-browserify) to get rid of some errors + other lib
+- sourcemap error
+	Failed to parse source map from '/home/irzhy/www/labs.particle/node_modules/@metamask/safe-event-emitter/index.ts' file: Error: ENOENT: no such file or directory, open '/home/irzhy/www/labs.particle/node_modules/@metamask/safe-event-emitter/index.ts
+
+	--> fixed wit webpack in craco
+- now getting another error
+Failed to compile.
+
+SyntaxError: /home/irzhy/www/labs.particle/node_modules/@metamask/rpc-errors/dist/chunk-ROLUROML.mjs: When using '@babel/plugin-transform-parameters', it's not possible to compile `super()` in an arrow function with default or rest parameters without compiling classes.
+Please add '@babel/plugin-transform-classes' to your Babel configuration.
+  10 |   constructor(code, message, data) {
+  11 |     var __super = (...args) => {
+> 12 |       super(...args);
+     |       ^^^^^^^^^^^^^^
+  13 |     };
+  14 |     if (!Number.isInteger(code)) {
+  15 |       throw new Error('"code" must be an integer.');
+
+--> add `@babel/plugin-transform-classes`
+	+ update babel config
+	+ in webpack
+	babel: {
+	    plugins: [
+	      ['@babel/plugin-transform-parameters', { loose: true }],
+	      ['@babel/plugin-transform-classes', { loose: true }],
+	      ['@babel/plugin-proposal-class-properties', { loose: true }],
+	      ['@babel/plugin-transform-private-methods', { loose: true }],
+	      ['@babel/plugin-transform-private-property-in-object', { loose: true }]
+	    ]
+	  },
+
+
